@@ -37,6 +37,7 @@ const Usersearch = () => {
                   value={text}
                   onChange={handleChange}
                   placeholder='Search'
+                  autoComplete='off'
                 />
                 <button type='submit' className='send-btn'>
                   GO
