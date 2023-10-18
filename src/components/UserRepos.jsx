@@ -7,19 +7,11 @@ import { FaEye, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa'
 const UserRepos = () => {
   const { getUserRepos, repos } = useContext(GithubContext)
 
-  const {
-    name,
-    description,
-    html_url,
-    forks,
-    open_issues,
-    watchers_count,
-    stargazers_count,
-  } = repos
   const params = useParams()
 
   useEffect(() => {
     getUserRepos(params.login)
+    // eslint-disable-next-line
   }, [])
   return (
     <Wrapper>

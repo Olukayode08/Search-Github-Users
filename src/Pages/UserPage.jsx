@@ -12,6 +12,7 @@ const UserPage = () => {
 
   useEffect(() => {
     getUser(params.login)
+    // eslint-disable-next-line
   }, [])
 
   const {
