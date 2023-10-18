@@ -29,7 +29,7 @@ const UserResults = () => {
                 </div>
                 <div className='user-info'>
                   <h2>{user.login}</h2>
-                  <Link className='visit-profile'to={`/users/${user.login}`}>Visit Profile</Link>
+                  <Link className='visit-profile'to={`/user/${user.login}`}>Visit Profile</Link>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ const Wrapper = styled.section`
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 550px) {
     .user-details {
       grid-template-columns: repeat(1, 1fr);
     }

@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import HomePage from './Pages/HomePage'
 import AboutPage from './Pages/AboutPage'
 import NotFound from './Pages/NotFound'
+import Alert from './components/Alert'
+import UserPage from './Pages/UserPage'
 
 function App() {
   return (
@@ -13,10 +15,13 @@ function App() {
         <div className='section'>
           <Navbar />
           <main>
+            <Alert />
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/about' element={<AboutPage />} />
+              <Route path='/user/:login' element={<UserPage />} />
               <Route path='/*' element={<NotFound />} />
+              <Route path='/notfound' element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
