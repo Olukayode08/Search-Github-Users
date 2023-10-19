@@ -4,7 +4,6 @@ import GithubReducer from '../reducers/GithubReducer'
 const GithubContext = createContext()
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN
 
 const Context = ({ children }) => {
   // Using Usestate
@@ -28,9 +27,6 @@ const Context = ({ children }) => {
     })
     setLoading()
     const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
     })
     const { items } = await response.json()
     // Using Usestate
@@ -48,9 +44,6 @@ const Context = ({ children }) => {
   const getUser = async (login) => {
     setLoading()
     const response = await fetch(`${GITHUB_URL}/users/${login}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
     })
     if (response.status === 404) {
       window.location = '/notfound'
@@ -74,9 +67,6 @@ const Context = ({ children }) => {
           per_page: 10,
         })
     const response = await fetch(`${GITHUB_URL}/users/${login}/repos?${params}`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
     })
     if (response.status === 404) {
       window.location = '/notfound'

@@ -11,7 +11,7 @@ const AboutPage = () => {
           ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos unde
           ad officia porro saepe.
         </p>
-        <p>Layout By: Olukayode Azeez</p>
+        <p>Developed By: Olukayode Azeez</p>
       </div>
     </Wrapper>
   )
